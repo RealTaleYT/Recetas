@@ -1,0 +1,11 @@
+<h2>Vamos a añadir más recetas</h2>
+<form [formGroup]="recetaForm" class="form bg-secondary text-light" id="form">
+  <label class="form-label fs-3">Nombre Receta</label>
+  <input class="form-control" type="text" id="nombreReceta" name="nombreReceta" placeholder="Langostinos" formControlName="titulo">
+  <label class="form-label fs-3">Imagen Receta</label>
+  <input class="form-control" type="text" id="imagenReceta" name="imagenReceta" placeholder="http://...." formControlName="imagen">
+  <label class="form-label fs-3">Ingredientes Receta</label>
+  <input class="form-control"  id="ingredientesReceta" name="ingredientesReceta" placeholder="Patatas, tomates, chorizo..." formControlName="ingredientes">
+  <button class="btn btn-info m-2" id="btnAgregar" (click)="agregarReceta()">Agregar</button>
+  <button class="btn btn-danger" id="btnCancelar" type="reset">Cancelar</button>
+</form>
