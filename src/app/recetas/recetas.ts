@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Receta } from '../Class/receta';
-import { RecetaFrom } from "../receta-from/receta-from";
+import { RecetaForm } from "../receta-form/receta-form";
 
 @Component({
   selector: 'app-recetas',
-  imports: [RecetaFrom],
+  imports: [RecetaForm],
   templateUrl: './recetas.html',
   styleUrl: './recetas.scss'
 })
