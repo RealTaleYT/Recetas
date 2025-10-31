@@ -2,7 +2,7 @@
     @for (receta of recetas; track $index){
         <div class="col-lg-3 col-sm-4">
             <div class="card">
-                <img [src]="receta.getImage()" class="card-img-top" alt="Imagen Receta" height="120px" (click)="detallesReceta(receta.getId())">
+                <img [src]="receta.getImage()" class="card-img-top" alt="Imagen {{receta.getTitle()}}" (click)="detallesReceta(receta.getId())">
                 <div class="card-body">
                     <div class="card-title" (click)="detallesReceta(receta.getId())">
                         {{receta.getTitle()}}
