@@ -2,31 +2,33 @@
 <form [formGroup]="recetaForm" class="form bg-secondary text-light" id="form">
   <label class="form-label fs-3">Nombre Receta</label>
   <input class="form-control" type="text" id="nombreReceta" name="nombreReceta" placeholder="Langostinos" formControlName="titulo" required>
-  <label class="form-label fs-3">Imagen Receta</label>
-  <input class="form-control" type="text" id="imagenReceta" name="imagenReceta" placeholder="http://...." formControlName="imagen" required>
-  <label class="form-label fs-3">Ingredientes Receta</label>
-  <input class="form-control"  id="ingredientesReceta" name="ingredientesReceta" placeholder="Patatas, tomates, chorizo..." formControlName="ingredientes" required>
-  <button class="btn btn-info m-2" id="btnAgregar" (click)="agregarReceta()">Agregar</button>
-  <button class="btn btn-danger" id="btnCancelar" type="reset">Cancelar</button>
-</form>
-@if (titulo?.invalid && (titulo?.dirty || titulo?.touched)) {
-  <div class="alert alert-danger">
+  @if (titulo?.invalid && (titulo?.dirty || titulo?.touched)) {
+  <div class="alert alert-danger mt-1">
     <div>
       El título es obligatorio.
     </div>
   </div>
-}
-@if (imagen?.invalid && (imagen?.dirty || imagen?.touched)) {
-  <div class="alert alert-danger">
+  }
+  <label class="form-label fs-3">Imagen Receta</label>
+  <input class="form-control" type="text" id="imagenReceta" name="imagenReceta" placeholder="http://...." formControlName="imagen" required>
+  @if (imagen?.invalid && (imagen?.dirty || imagen?.touched)) {
+  <div class="alert alert-danger mt-1">
     <div>
       La imagen es obligatoria.
     </div>
   </div>
-}
-@if (ingredientes?.invalid && (ingredientes?.dirty || ingredientes?.touched)) {
-  <div class="alert alert-danger">
+  }
+  <label class="form-label fs-3">Ingredientes Receta</label>
+  <input class="form-control"  id="ingredientesReceta" name="ingredientesReceta" placeholder="Patatas, tomates, chorizo..." formControlName="ingredientes" required>
+  @if (ingredientes?.invalid && (ingredientes?.dirty || ingredientes?.touched)) {
+  <div class="alert alert-danger mt-1">
     <div>
       Los ingredientes son obligatorios.
     </div>
   </div>
-}
+  }
+  <button class="btn btn-info m-2" id="btnAgregar" (click)="agregarReceta()">Agregar</button>
+  <button class="btn btn-danger" id="btnCancelar" type="reset">Cancelar</button>
+</form>
+
+
